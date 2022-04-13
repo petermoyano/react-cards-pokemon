@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {useAxios}  from "./hooks";
 import PlayingCard from "./PlayingCard";
 import "./PlayingCardList.css";
@@ -9,12 +9,6 @@ function CardTable() {
   const url = "https://deckofcardsapi.com/api/deck/new/draw/";
   const [cards, setCards] = useAxios(url);
 
-  /* const addCard = async () => {
-    const response = await axios.get(
-      "https://deckofcardsapi.com/api/deck/new/draw/"
-    );
-    setCards(cards => [...cards, { ...response.data, id: uuid() }]);
-  }; */
   return (
     <div className="PlayingCardList">
       <h3>Pick a card, any card!</h3>
